@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Sound Activation Lock",
+      "imageSrc": "projects/Tiva C.png",
+      "description": "Worked with ARM architecture with a mix of C and Assembly to create a security system which unlocks upon a correct sequence of sonunds played. There are switches used to modulate the ",
+      "skills": ["React", "Express", "Node"],
+      "source": "https://www.github.com"
+    },
+    {
+      "title": "SilkNStitches Domain",
+      "imageSrc": "projects/project.png",
+      "description": "This is a project made to learn the latest languages by building an app.",
+      "skills": ["React", "Express", "Node", "Sass"],
+      "demo": "https://www.example.com",
+      "source": "https://www.github.com"
+    }
+  ]

@@ -1,4 +1,15 @@
 [
+    
+    {
+        "role": "Student",
+        "organization": "UIC",
+        "startDate": "Aug, 2022",
+        "endDate": "May, 2026",
+        "experiences": ["B.S. in Computer Engineering", 
+                        "Minor in Computer Science"],
+        "imagesrc": "history/uic.png"
+    },
+    
     {
         "role": "Associate Manager",
         "organization": "UPS",
@@ -8,4 +19,5 @@
                         "Handled over 10,000 packages in my tenure"],
         "imagesrc": "history/ups.png"
     }
+
 ]

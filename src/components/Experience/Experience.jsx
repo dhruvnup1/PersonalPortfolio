@@ -8,6 +8,7 @@ import { getImageUrl } from "../../utils";
 export const Experience = () => {
   return (
     <section className={styles.container} id="Experience">
+      <div className={styles.topBlur} /> {/* Top Blur Effect */}
       <h2 className={styles.title}>Experience</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
@@ -29,10 +30,10 @@ export const Experience = () => {
               <li key={id} className={styles.historyItem}>
                 <img
                   src={getImageUrl(historyItem.imagesrc)}
-                  alt={`${historyItem.organisation} Logo`}
+                  alt={`${historyItem.organization} Logo`}
                 />
                 <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
+                  <h3>{`${historyItem.role}, ${historyItem.organization}`}</h3>
                   <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
                   <ul>
                     {historyItem.experiences.map((experience, id) => {
@@ -45,6 +46,7 @@ export const Experience = () => {
           })}
         </ul>
       </div>
+      <div className={styles.bottomBlur} /> {/* Bottom Blur Effect */}
     </section>
   );
 };
