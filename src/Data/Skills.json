@@ -1,0 +1,16 @@
+[
+    {
+        "title": "C", 
+        "imagesrc": "skills/C_logo.png"
+    },
+
+    {
+        "title": "C++",
+        "imagesrc": "skills/c++5.png"
+    },
+
+    {
+        "title": "Python",
+        "imagesrc": "skills/python5.webp"
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "role": "Associate Manager",
+        "organization": "UPS",
+        "startDate": "Aug, 2021",
+        "endDate": "Jun, 2022",
+        "experiences": ["Awarded UPS bronze plaque for 2021, signifying overall store success.",
+                        "Handled over 10,000 packages in my tenure"],
+        "imagesrc": "history/ups.png"
+    }
+]

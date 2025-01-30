@@ -1,0 +1,138 @@
+@import '../../vars.css';
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 61px;
+    z-index: 2;
+    margin: 0 10%;
+    animation: transitionIn 0.75s; 
+    animation-delay: 0.25s;
+}
+
+.title {
+    font-Size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.menu {
+    display: flex;
+}
+
+.menuItems {
+    display: flex;
+    gap: 47px;
+    list-style: none;
+}
+
+.menuItems a {
+    position: relative;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.menuItems a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: width 0.3s ease;
+}
+
+.menuItems a:hover::after {
+    width: 100%;
+}
+
+@media screen and (min-width: 831px) {
+    .menuBtn {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        animation: transitionIn;
+    }
+
+}
+@media screen and (max-width:830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-right: 10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+    }
+
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .menuBtn:hover {
+        transform: scale(1.1);
+    }
+
+    .menuItems {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        border-radius: 10px;
+        background: rgb(25, 55, 109);
+        background: linear-gradient(
+            0deg, 
+            rgba(25, 55, 198, 0.2) 9%,
+            rgba(25, 55, 109, 1) 100%
+        );
+        padding: 24px 33px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menuOpen {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Add hover effect for menu items */
+    .menuItems a {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .menuItems a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-text);
+        transition: width 0.3s ease;
+    }
+
+    .menuItems a:hover::after {
+        width: 100%;
+    }
+}

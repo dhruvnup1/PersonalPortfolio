@@ -1,0 +1,28 @@
+/*
+This file is useful for importing all our fonts in one location
+and using them throughout our code
+*/
+
+:root {
+    /* colors */
+    --color-text: #fff;
+    --color-primary: #576cbc; 
+    --color-secondary: #19376d; 
+    --color-dark: #0b2447;
+    --color-bg: #04152d;
+
+    /* fonts */
+    --font-robot: "Roboto"; 
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0; 
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1; 
+        transform: rotateX(0); 
+    }
+}

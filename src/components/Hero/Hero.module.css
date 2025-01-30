@@ -1,0 +1,139 @@
+@import '../../vars.css';
+
+.container {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 49px; 
+    z-index: 1; 
+    margin-left: 10%;
+    margin-right: 10%; 
+    animation: transitionIn 1.5s ease-in-out; 
+    animation-delay: 0.35s;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 33px; 
+    font-family: var(--font-roboto);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 70%,
+        rgba(255, 255, 255, 0) 120%
+    );
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+.topBlur {
+    position: absolute; 
+    width: 50vw; 
+    height: 50vw; 
+    min-width: 350px;
+    min-height: 350px;
+    top: -128px;
+    left: 10vw; 
+    border-radius: 842px;
+    background: rgba(0, 212, 255, .35); 
+    filter: blur(100px); 
+    z-index: 0;
+}
+
+.bottomBlur {
+    position: absolute; 
+    width: 70vw; 
+    height: 50vw; 
+    min-width: 350px;
+    min-height: 250px;
+    top: -246px;
+    right: -25vw; 
+    border-radius: 764px;
+    background: rgba(143, 13, 120, 0.3); 
+    filter: blur(100px); 
+    z-index: 0;
+}
+
+
+.description {
+    font-size: 30px;
+    font-family: var(--font-roboto);
+    margin-bottom: 52px; 
+}
+
+.btnOne {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 50px; 
+}
+
+.btnOne span {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.btnOne::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+
+.btnOne:hover span {
+    letter-spacing: 2px;
+}
+
+.btnOne:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+}
+
+.btnOne::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.btnOne:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        align-items: center;
+    }
+}
